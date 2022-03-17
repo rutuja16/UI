@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <title>Project-5 TODO JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+     <div class="container">
+        <div class="header">
+            <label><span>Tasks </span> List</label>
+            <a class="add" id="add" ><i class="material-icons" >add_circle</i><div class="addItem">Add Item</div></a>
+        </div>
+        <div class="itembox" id="itembox">
+            <h3 id="hide">No items in the todo list</h3>
+            <div class="parent" id="parent"></div>
+        </div>
+
+        
+    </div> 
+    <div class="model" id="model" >
+        <div class="task-popup" id="task-popup">
+            <label>Add New List</label><br><br>
+            <input type="text" id="task_name" placeholder="Add New Task"><br><br>
+            <button type="submit" onclick="addtask();" class="btn">Add</button>
+            <button type="close"  class="btn close-button" >Close</button>
+        </div>
+    </div>
+
+    <div class="model-item" id="model-item" >
+        <div class="item-popup" id="item-popup">
+            <label>Add New Item</label><br><br>
+            <input type="text" id="item_name" placeholder="Add New Item"><br><br>
+            <button type="submit"   class="btn addSubItem">Add</button>
+            <button type="close"  class="btn close-button" >Close</button>
+        </div>
+    </div>
+
+    
+    <script>
+        modal("#add",".model",".task-popup",true);
+        
+    </script>
+
+</body>
+</html>
